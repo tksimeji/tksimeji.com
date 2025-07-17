@@ -2,14 +2,34 @@
 
 :root {
   --background: #ffffff;
+  --color-dark: #0d1117;
+  --color-dark-purple: #987ea3;
+  --color-light: #f8faff;
+  --color-purple: #b5a1d4;
+  --color-rose-gray: #c8aa9a;
   --foreground: #171717;
+}
+
+a {
+  color: var(--color-purple);
+}
+
+a:hover {
+  color: var(--color-dark-purple);
+  transition-duration: 0.6s;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-dark: var(--color-dark);
+  --color-dark-purple: var(--color-dark-purple);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-light: var(--color-light);
+  --color-purple: var(--color-purple);
+  --color-rose-gray: var(--color-rose-gray);
   --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-geist-sans);
+  --font-source-code: "Source Code Pro", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,10 +37,4 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
