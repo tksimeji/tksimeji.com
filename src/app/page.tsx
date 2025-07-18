@@ -6,7 +6,7 @@ import SkillCardSection from '@/components/SkillCardSection';
 
 export default function Home() {
   return (
-    <div className="bg-light">
+    <>
       <Header/>
       <HeroSection/>
       <SkillCardSection>
@@ -33,6 +33,6 @@ export default function Home() {
         <SkillCard icon={<Image alt="Rust" height={40} src="./assets/rust.svg" width={40} />} title="Rust">
         </SkillCard>
       </SkillCardSection>
-    </div>
+    </>
   );
 };

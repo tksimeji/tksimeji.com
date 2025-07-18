@@ -51,7 +51,7 @@ const HeroSectionTitle = () => {
         <p className={`${styles.cursor} text-purple`}>|</p>
         <p>Developer</p>
       </div>
-      <p className="mt-10 text-gray-700"><a href="https://www.azisaba.net">アジ鯖</a>というマインクラフトサーバーで統括開発者をしています</p>
+      <p className="mt-10 text-secondary-text"><a href="https://www.azisaba.net">アジ鯖</a>というマインクラフトサーバーで統括開発者をしています</p>
     </>
   );
 };

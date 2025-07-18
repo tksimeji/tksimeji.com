@@ -1,6 +1,7 @@
 import HeaderGitHubItem from '@/components/HeaderGitHubItem';
 import HeaderTwitterItem from '@/components/HeaderTwitterItem';
 import HeaderTitle from '@/components/HeaderTitle';
+import ThemeToggleButton from '@/components/ThemeToggleButton';
 
 const Header = () => {
   return (
@@ -10,6 +11,7 @@ const Header = () => {
         <nav className="flex items-center md:ml-auto text-base">
           <HeaderTwitterItem />
           <HeaderGitHubItem />
+          <ThemeToggleButton />
         </nav>
       </div>
     </header>
