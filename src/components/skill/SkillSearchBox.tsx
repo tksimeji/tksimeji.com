@@ -1,4 +1,5 @@
 import { ListFilter } from 'lucide-react';
+import { ChangeEventHandler } from 'react';
 
 const SkillSearchBox = (props: SkillSearchBoxProps) => {
   return (
