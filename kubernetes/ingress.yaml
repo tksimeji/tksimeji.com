@@ -3,9 +3,13 @@ kind: Ingress
 metadata:
   name: tksimejicom-ingress
 spec:
-  ingressClassName: nginx
+  tls:
+    - hosts:
+        - tksimeji.com
+      secretName: tksimejicom-tls
   rules:
-    - http:
+    - host: tksimeji.com
+      http:
         paths:
           - path: /
             pathType: Prefix
