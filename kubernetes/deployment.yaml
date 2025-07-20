@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tksimejicom-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tksimejicom
+  template:
+    metadata:
+      labels:
+        app: tksimejicom
+    spec:
+      containers:
+        - name: tksimejicom
+          image: ghcr.io/tksimeji/tksimeji.com:latest
+          ports:
+            - containerPort: 3000
+      imagePullSecrets:
+        - name: ghcr-secret
