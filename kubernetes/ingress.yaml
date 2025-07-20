@@ -4,7 +4,7 @@ metadata:
   name: tksimejicom-ingress
 spec:
   rules:
-    - host: tksimeji.local
+    - host: ""
       http:
         paths:
           - path: /
