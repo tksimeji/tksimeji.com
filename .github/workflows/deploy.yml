@@ -6,7 +6,8 @@ on:
       - master
 
 env:
-  IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/tksimeji.com
+  REGISTRY: ghcr.io
+  IMAGE_NAME: tksimeji.com
 
 jobs:
   build-and-push:
@@ -23,11 +24,13 @@ jobs:
       - name: Login to GitHub Container Repository
         uses: docker/login-action@v3
         with:
-          registry: ghcr.io
+          registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push Docker image
-        run: |
-          docker build -f kubernetes/Dockerfile -t $IMAGE_NAME:latest .
-          docker push $IMAGE_NAME:latest
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ env.REGISTRY }}/${{ github.repository }}/${{ env.IMAGE_NAME }}:latest
