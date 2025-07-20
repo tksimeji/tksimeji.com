@@ -1,5 +1,5 @@
-import HeroSectionTitle from '@/components/HeroSectionTitle';
-import Terminal from '@/components/Terminal';
+import HeroSectionTitle from '@/components/hero/HeroSectionTitle';
+import Terminal from '@/components/hero/Terminal';
 import Section from '@/components/Section';
 
 const HeroSection = () => {

@@ -1,4 +1,4 @@
-import HeaderItem from '@/components/HeaderItem';
+import HeaderItem from '@/components/header/HeaderItem';
 
 const HeaderGitHubItem = () => {
   return(

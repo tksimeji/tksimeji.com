@@ -1,7 +1,7 @@
-import HeaderGitHubItem from '@/components/HeaderGitHubItem';
-import HeaderTwitterItem from '@/components/HeaderTwitterItem';
-import HeaderTitle from '@/components/HeaderTitle';
-import ThemeToggleButton from '@/components/ThemeToggleButton';
+import HeaderGitHubItem from '@/components/header/HeaderGitHubItem';
+import HeaderTwitterItem from '@/components/header/HeaderTwitterItem';
+import HeaderTitle from '@/components/header/HeaderTitle';
+import ThemeToggleButton from '@/components/header/ThemeToggleButton';
 
 const Header = () => {
   return (
