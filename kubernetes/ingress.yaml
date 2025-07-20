@@ -2,7 +2,10 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: tksimejicom-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-http
 spec:
+  ingressClassName: nginx
   tls:
     - hosts:
         - tksimeji.com
