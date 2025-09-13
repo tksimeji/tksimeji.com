@@ -2,17 +2,27 @@
 
 :root {
   --background: #f9f9f9;
-  --color-dark-purple: #987ea3;
-  --color-primary-text: #101828;
-  --color-purple: #b5a1d4;
-  --color-secondary-text: #364153;
+  --background-grid: rgba(229, 231, 235, 0.8);
+  --background-purple-glow: rgba(139, 92, 246, 0.3);
+  --background-blue-glow: rgba(59, 130, 246, 0.3);
+
   --color-surface: #efefef;
   --color-surface-hover: #e0e0e0;
+
+  --color-primary-text: #101828;
+  --color-secondary-text: #364153;
+
+  --primary-purple: #b5a1d4;
+  --primary-dark-purple: #987ea3;
+
   --foreground: #171717;
 }
 
 .dark {
   --background: #212121;
+  --background-grid: rgba(55, 65, 81, 0.4);
+  --background-purple-glow: rgba(139, 92, 246, 0.15);
+  --background-blue-glow: rgba(59, 130, 246, 0.15);
   --color-primary-text: #f3f4f6;
   --color-secondary-text: #99a1af;
   --color-surface: #303030;
@@ -23,10 +33,13 @@
 
 @theme inline {
   --color-background: var(--background);
-  --color-dark-purple: var(--color-dark-purple);
-  --color-foreground: var(--foreground);
-  --color-primary-text: var(--color-primary-text);
-  --color-purple: var(--color-purple);
+  --color-background-grid: var(--background-grid);
+  --color-background-purple-glow: var(--background-purple-glow);
+  --color-background-blue-glow: var(--background-blue-glow);
+
+  --color-primary-purple: var(--primary-purple);
+  --color-primary-dark-purple: var(--primary-dark-purple);
+
   --color-secondary-text: var(--color-secondary-text);
   --color-surface: var(--color-surface);
   --color-surface-hover: var(--color-surface-hover);
@@ -43,5 +56,16 @@
   a:hover {
     color: var(--color-dark-purple);
     transition-duration: 0.6s;
+  }
+}
+
+@layer utilities {
+  @keyframes spinOnce {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .animate-spin-once {
+    animation: spinOnce 0.6s ease-in-out;
   }
 }

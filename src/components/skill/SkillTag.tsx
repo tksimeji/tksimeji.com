@@ -3,7 +3,7 @@ import { GraduationCap, Heart, PcCase } from 'lucide-react';
 
 export const SkillTag = (props: SkillTagProps) => {
   return (
-    <div className="bg-purple cursor-pointer duration-300 hover:bg-dark-purple inline-flex items-center mr-2 my-1 px-4 py-1 rounded-4xl select-none text-[12px] text-white transition">
+    <div className="bg-primary-purple cursor-pointer duration-300 hover:bg-primary-dark-purple inline-flex items-center mr-2 my-1 px-4 py-1 rounded-4xl select-none text-[12px] text-white transition">
       {props.icon}
       <p className="ml-1">{props.title}</p>
     </div>

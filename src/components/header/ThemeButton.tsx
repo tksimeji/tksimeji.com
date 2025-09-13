@@ -1,12 +1,12 @@
 'use client';
 
 import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Monitor, Moon, Sun } from 'lucide-react';
 
 const themeOrder = ['system', 'light', 'dark'];
 
-const ThemeToggleButton = () => {
+export const ThemeButton: React.FC = () => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -35,13 +35,15 @@ const ThemeToggleButton = () => {
   };
 
   return (
-    <button className="bg-purple cursor-pointer duration-300 hover:bg-dark-purple text-gray-100 px-4 py-2 rounded-4xl" onClick={handleClick}>
-      <div className="flex items-center mr-4">
+    <button
+      className="bg-primary-purple cursor-pointer duration-300
+       hover:bg-dark-purple select-none text-gray-100 px-4 py-2 rounded-4xl"
+      onClick={handleClick}
+    >
+      <div className="flex gap-2 items-center mr-4">
         {renderIcon()}
-        <p className="ml-1">Theme</p>
+        <p>Theme</p>
       </div>
     </button>
   );
 };
-
-export default ThemeToggleButton;
